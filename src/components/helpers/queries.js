@@ -5,8 +5,8 @@ const URL_producto = import.meta.env.VITE_API_PRODUCTO
 export const iniciarSesion = async (usuario)=>{
     try{
         const respuesta = await fetch(URL_usuario);
-        const listausuarios = await respuesta.json();
-        const usuarioBuscado = listausuarios.find((itemUsuario)=> itemUsuario.email === usuario.email);
+        const listaUsuarios = await respuesta.json();
+        const usuarioBuscado = listaUsuarios.find((itemUsuario)=> itemUsuario.email === usuario.email);
         if(usuarioBuscado){
             // el mail era correcto
             if(usuarioBuscado.password === usuario.password){
