@@ -2,30 +2,30 @@
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { registrarse } from "../helpers/queries";
-import Swal from "sweetalert2";
+// import { registrarse } from "../helpers/queries";
+// import Swal from "sweetalert2";
 
 
 const Registro = () => {
   const {register, handleSubmit, formState: { errors }, reset} = useForm();
   const navegacion = useNavigate();
 
-  const onSubmit = (usuarioRegistrado) => {
-    console.log(usuarioRegistrado);
-    registrarse(usuarioRegistrado).then((respuesta)=>{
-      if (respuesta) {
-        sessionStorage.setItem("usuarioRegistrado", JSON.stringify(respuesta));
-        reset();
-        navegacion("/login");
-      } else {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "El nombre, email o la contraseña son incorrectos!",
-        });
-      } 
-    })
-  }
+  // const onSubmit = (usuarioRegistrado) => {
+  //   console.log(usuarioRegistrado);
+  //   registrarse(usuarioRegistrado).then((respuesta)=>{
+  //     if (respuesta) {
+  //       sessionStorage.setItem("usuarioRegistrado", JSON.stringify(respuesta));
+  //       reset();
+  //       navegacion("/login");
+  //     } else {
+  //       Swal.fire({
+  //         icon: "error",
+  //         title: "Error",
+  //         text: "El nombre, email o la contraseña son incorrectos!",
+  //       });
+  //     } 
+  //   })
+  // }
 
   return (
     <div className="mt-5 mainSection">

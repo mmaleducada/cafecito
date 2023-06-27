@@ -1,8 +1,27 @@
 {
-    "productos": [
-      { "id": 1, "nombreProducto": "Café", "precio": 300, "categoria": "bebida caliente", "imagen": "https://images.pexels.com/photos/3020919/pexels-photo-3020919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "descripcion":"alguna descripcion..." }
-    ],
-    "usuarios": [
-      { "id": 1, "nombreUsuario": "admin", "email": "admin@rollingcode.com", "password": "Male1234" }
-    ]  
-  }
+  "productos": [
+    {
+      "id": 1,
+      "nombreProducto": "Café",
+      "precio": 300,
+      "categoria": "bebida caliente",
+      "imagen": "https://images.pexels.com/photos/3020919/pexels-photo-3020919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "descripcion": "alguna descripcion..."
+    },
+    {
+      "nombreProducto": "Cafesuli",
+      "precio": "50",
+      "imagen": "https://images.pexels.com/photos/4038866/pexels-photo-4038866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "categoria": "bebida caliente",
+      "id": 2
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombreUsuario": "admin",
+      "email": "admin@rollingcode.com",
+      "password": "Male1234"
+    }
+  ]
+}
