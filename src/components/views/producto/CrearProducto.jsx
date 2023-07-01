@@ -1,7 +1,5 @@
 import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { crearProducto } from "../../helpers/queries";
-import Swal from "sweetalert2";
 const CrearProducto = () => {
   const {
     register,
@@ -12,14 +10,6 @@ const CrearProducto = () => {
 
   const onSubmit = (productoNuevo) => {
     console.log(productoNuevo);
-    crearProducto(productoNuevo).then((respuesta)=>{
-      if(respuesta.status === 201){
-        Swal.fire('Producto creado', `El producto ${productoNuevo.nombreProducto} fue creado correctamente`, 'success');
-        reset();
-      }else{
-        Swal.fire('Ocurrio un error', `El producto ${productoNuevo.nombreProducto} no pudo ser creado`, 'error');
-      }
-    })
   };
 
   return (

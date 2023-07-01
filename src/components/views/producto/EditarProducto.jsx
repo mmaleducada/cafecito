@@ -1,9 +1,5 @@
-import { useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useParams } from "react-router-dom";
-import { obtenerProducto } from "../../helpers/queries";
-
 
 const EditarProducto = () => {
   const {
@@ -11,25 +7,10 @@ const EditarProducto = () => {
     handleSubmit,
     formState: { errors },
     reset,
-    setValue
   } = useForm();
-  const {id} = useParams();
 
-  useEffect(()=>{
-    obtenerProducto(id).then((respuesta)=>{
-      if(respuesta){
-        //cargar en el formulario los datos del objeto
-        setValue('nombreProducto', respuesta.nombreProducto);
-        setValue('precio', respuesta.precio);
-        setValue('categoria', respuesta.categoria);
-        setValue('imagen', respuesta.imagen);
-      }
-    })
-  }, [])
-
-  const onSubmit = (productoEditado) => {
-    console.log(productoEditado);
-    // agregar la consulta de la api que pide editar
+  const onSubmit = (productoNuevo) => {
+    console.log(productoNuevo);
   };
 
   return (
