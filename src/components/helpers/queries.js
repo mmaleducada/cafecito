@@ -2,6 +2,7 @@
 const URL_usuario = import.meta.env.VITE_API_USUARIO
 const URL_producto = import.meta.env.VITE_API_PRODUCTO
 
+// todas las consultas a la api las tiene este archivo
 export const iniciarSesion = async (usuario)=>{
     try{
         const respuesta = await fetch(URL_usuario);
@@ -25,13 +26,13 @@ export const iniciarSesion = async (usuario)=>{
     }
 } 
 
-export const obtenerListaProductos = async()=>{
-    try{
+export const obtenerListaProductos = async() => {
+    try {
         const respuesta = await fetch(URL_producto);
         const listaProductos = await respuesta.json();
         return listaProductos;
-    }catch(error){
-        console.log(error)
+    } catch (error) {
+        console.log(error);
     }
 }
 
