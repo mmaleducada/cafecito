@@ -1,6 +1,10 @@
 import { Col, Card, Button } from "react-bootstrap";
 
+
+
 const CardProducto = () => {
+  
+
   return (
     <Col md={4} ld={3} className="mb-3">
       <Card>

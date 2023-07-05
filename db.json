@@ -1,33 +1,11 @@
 {
   "productos": [
     {
-      "id": 1,
-      "nombreProducto": "Café",
-      "precio": 300,
-      "categoria": "bebida caliente",
-      "imagen": "https://images.pexels.com/photos/3020919/pexels-photo-3020919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "descripcion": "alguna descripcion..."
-    },
-    {
       "nombreProducto": "Cafesuli",
       "precio": "50",
       "imagen": "https://images.pexels.com/photos/4038866/pexels-photo-4038866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "categoria": "bebida caliente",
       "id": 2
-    },
-    {
-      "nombreProducto": "Tortilla",
-      "precio": "4455",
-      "imagen": "https://www.pexels.com/es-es/vans-en-blanco-y-negro-fuera-de-la-decoracion-para-colgar-en-la-pared-1230679/",
-      "categoria": "salado",
-      "id": 3
-    },
-    {
-      "nombreProducto": "Medialuna",
-      "precio": "170",
-      "imagen": "https://www.pexels.com/es-es/vans-en-blanco-y-negro-fuera-de-la-decoracion-para-colgar-en-la-pared-1230679/",
-      "categoria": "dulce",
-      "id": 4
     }
   ],
   "usuarios": [

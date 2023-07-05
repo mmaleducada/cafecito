@@ -14,9 +14,9 @@ const EditarProducto = () => {
     reset,
     setValue
   } = useForm();
-
+  
   const {id} = useParams();
-
+  
   useEffect(()=> {
     obtenerProducto(id).then((respuesta) => {
       if(respuesta){
@@ -28,12 +28,12 @@ const EditarProducto = () => {
       }
     })
   }, [])
-
+  
   const onSubmit = (productoEditado) => {
     console.log(productoEditado);
 
-    editarProducto(productoEditado).then((respuesta)=> {
-      if(respuesta.status === 200) {
+    editarProducto(productoEditado, id).then((respuesta)=> {
+      if(respuesta) {
         Swal.fire("Producto editado", `El producto ${productoEditado.nombreProducto} se editó correctamente`, "success");
         reset();
       } else {
