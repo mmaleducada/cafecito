@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import { borrarProducto } from "../../helpers/queries";
+import { borrarProducto, obtenerListaProductos } from "../../helpers/queries";
 
 
 
@@ -22,7 +22,14 @@ const ItemProducto = ({producto, productos, setProductos}) => {
       if (resultado.isConfirmed) {
         borrarProducto(producto.id).then((respuesta)=>{
           if(respuesta.status === 200){
-            eliminarProducto();
+            //Pedir la lista de productos a mi back
+            obtenerListaProductos().then((respuesta)=>{
+              if(respuesta){
+                setProductos(respuesta);
+              } else {
+                Swal.fire("Error", "Intente realizar esta operacion en unos minutos", "error");
+              }
+            })
             Swal.fire(
               'Borrado!',
               'El producto fue borrado.',
@@ -41,10 +48,6 @@ const ItemProducto = ({producto, productos, setProductos}) => {
     })
 }
 
-const eliminarProducto = () =>{
-  const nuevaListaProducto = productos.filter((productoFiltrado) => productoFiltrado !== producto);
-  setProductos(nuevaListaProducto);
-}
 
    return (
     <tr>

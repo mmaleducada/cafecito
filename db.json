@@ -1,13 +1,5 @@
 {
-  "productos": [
-    {
-      "nombreProducto": "Cafesito",
-      "precio": "400",
-      "imagen": "https://images.pexels.com/photos/4038866/pexels-photo-4038866.jpeg",
-      "categoria": "bebida caliente",
-      "id": 2
-    }
-  ],
+  "productos": [],
   "usuarios": [
     {
       "id": 1,

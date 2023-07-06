@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import { obtenerListaProductos } from "../helpers/queries";
 const Inicio = () => {
 
-  const[productos, SetProductos] = useState([]);
+  const[productos, setProductos] = useState([]);
 
   useEffect(()=>{
     obtenerListaProductos().then((respuesta)=>{
       if(respuesta){
-        SetProductos(respuesta);
+        setProductos(respuesta);
       } else {
         Swal.fire("Error", "Intente realizar esta operacion en unos minutos", "error");
       }
