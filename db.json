@@ -16,9 +16,9 @@
     },
     {
       "nombreProducto": "Submarino",
-      "precio": "600",
+      "precio": "1000",
       "imagen": "https://images.pexels.com/photos/3860527/pexels-photo-3860527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "categoria": "bebida caliente",
+      "categoria": "bebida fria",
       "id": 3
     },
     {
