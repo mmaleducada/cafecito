@@ -1,5 +1,34 @@
 {
-  "productos": [],
+  "productos": [
+    {
+      "nombreProducto": "Galletas",
+      "precio": "666",
+      "imagen": "https://images.pexels.com/photos/2377474/pexels-photo-2377474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "categoria": "dulce",
+      "id": 1
+    },
+    {
+      "nombreProducto": "Alfajor",
+      "precio": "99",
+      "imagen": "https://images.pexels.com/photos/1346340/pexels-photo-1346340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "categoria": "dulce",
+      "id": 2
+    },
+    {
+      "nombreProducto": "Submarino",
+      "precio": "600",
+      "imagen": "https://images.pexels.com/photos/3860527/pexels-photo-3860527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "categoria": "bebida caliente",
+      "id": 3
+    },
+    {
+      "nombreProducto": "Cupcake",
+      "precio": "7777",
+      "imagen": "https://images.pexels.com/photos/4099127/pexels-photo-4099127.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "categoria": "dulce",
+      "id": 4
+    }
+  ],
   "usuarios": [
     {
       "id": 1,
