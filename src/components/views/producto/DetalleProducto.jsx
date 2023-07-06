@@ -1,6 +1,8 @@
 import { Container, Card, Row, Col } from "react-bootstrap";
 
+
 const DetalleProducto = () => {
+  
   return (
     <Container className="my-3 mainSection">
       <Card>

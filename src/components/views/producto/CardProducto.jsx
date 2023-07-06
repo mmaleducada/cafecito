@@ -1,8 +1,10 @@
-import { Col, Card, Button } from "react-bootstrap";
+import { Col, Card} from "react-bootstrap";
+import { Link } from "react-router-dom";
+import DetalleProducto from "./DetalleProducto";
 
 
 
-const CardProducto = () => {
+const CardProducto = ({producto}) => {
   
 
   return (
@@ -10,12 +12,12 @@ const CardProducto = () => {
       <Card>
         <Card.Img
           variant="top"
-          src="https://images.pexels.com/photos/10273537/pexels-photo-10273537.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={producto.imagen}
         />
         <Card.Body>
-          <Card.Title>MOCHACCINO CANELA</Card.Title>
-          <Card.Text>$1.740,00</Card.Text>
-          <Button variant="primary">Ver detalle</Button>
+          <Card.Title>{producto.nombreProducto}</Card.Title>
+          <Card.Text>${producto.precio}</Card.Text>
+          <Link className="btn btn-primary" to="/detalle">Ver detalle</Link>
         </Card.Body>
       </Card>
     </Col>

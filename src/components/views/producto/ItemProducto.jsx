@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import { borrarProducto, obtenerListaProductos } from "../../helpers/queries";
+import { borrarProducto } from "../../helpers/queries";
 
 
 
@@ -18,8 +18,8 @@ const ItemProducto = ({producto, productos, setProductos}) => {
       cancelButtonColor: '#d33',
       confirmButtonText: 'Si, quiero borrar!',
       cancelButtonText: 'Cancelar'
-    }).then((result) => {
-      if (result.isConfirmed) {
+    }).then((resultado) => {
+      if (resultado.isConfirmed) {
         borrarProducto(producto.id).then((respuesta)=>{
           if(respuesta.status === 200){
             eliminarProducto();
@@ -31,7 +31,7 @@ const ItemProducto = ({producto, productos, setProductos}) => {
           }else{
             Swal.fire({
               title: "Lo siento!",
-              text: "La receta no pudo ser eliminada.",
+              text: "El producto no pudo ser eliminado.",
               icon: "error",
               confirmButtonColor: "#fa8072",
             });
